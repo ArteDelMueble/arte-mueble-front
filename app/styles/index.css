@@ -1,0 +1,171 @@
+:root {
+    --nav: rgba(216, 212, 202, 0.8);
+    --gris: rgba(216, 212, 202, 0.3);
+    --piel: #b28e6c;
+    --blanco: #D8D4C9;
+    --marron: #846f5E;
+    --marron-boton: rgba(132, 111, 94, 0.7);
+    --negro: #9D7166;
+    --fuente-principal: 'Lora', serif;
+}
+
+body{
+    font-family: var(--fuente-principal);
+    background-color: #EEEEEE;
+}
+
+/* -------------------------------- Heading -------------------------------- */
+
+.index{
+    padding: 24px 0;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 20px 15px -15px;
+}
+
+.page{
+    background-color: var(--nav);
+    padding: 24px 0;
+    width: 100%;
+
+}
+.index .logo, .page .logo{
+    width: 6rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+.barra{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .barra {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.index .navegacion, .page .navegacion, .contacto {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+@media (min-width: 768px) {
+    .index .navegacion, .page .navegacion, .contacto {
+        margin-top: 0;
+    }
+}
+
+.index .navegacion a, .page .navegacion a {
+    background-color: var(--gris);
+    color: var(--marron);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 5px;
+    border-radius: 5px;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+.index .navegacion a:hover, .page .navegacion a:hover, .index .active, .page .active {
+    background-color: var(--marron-boton) !important;
+    color: var(--blanco) !important;
+}
+
+.index .contacto a, .page .contacto a{
+    background-color: var(--marron-boton);
+    color: var(--blanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 6px;
+    border-radius: 5px;
+    align-items: center;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+.index .contacto a:hover, .page .contacto a:hover {
+    background-color: rgba(132, 111, 94, 0.9);
+ 
+}
+.icon{
+    width: 18px;
+}
+
+/* -------------------------------- Footer -------------------------------- */
+.footer{
+    background-color: var(--nav);
+    padding: 1.5rem 8rem;
+    align-items: center;
+}
+
+.navegacion-footer{
+    margin: 19.2px 0;
+}
+
+@media (min-width: 768px) {
+    .footer .contenido{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.footer .navegacion, .footer .contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.footer .contacto{
+    padding-top: 1rem;
+}
+@media (min-width: 768px) {
+    .footer .navegacion, .footer .contacto{
+            flex-direction: row;
+        }
+}
+
+.footer .contacto a{
+    background-color: var(--marron-boton);
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px -50px 36px -28px inset;
+    padding: 4px;
+    border-radius: 3px;
+    align-items: center;
+}
+.footer .navegacion a, .copyright,
+.direccion{
+    color: var(--marron);
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.copyright, .direccion{
+    text-align: center;
+}
+
+/* -------------------------------- Index -------------------------------- */
+.inicio{
+    background-image: url(../../public/img/fondoinicio.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: center center;
+}
